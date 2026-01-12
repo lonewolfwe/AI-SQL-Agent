@@ -16,7 +16,7 @@ with st.sidebar:
     api_key = st.text_input("Enter API Key (Google or OpenAI)", type="password")
     if api_key:
         if api_key.startswith("AIza"): # Simple check for Google Key
-            os.environ["GOOGLE_API_KEY"] = "AIzaSyAx0ZntCmvGb4BmXNoOY_ppPbaswdMyv_M"
+            os.environ["GOOGLE_API_KEY"] = api_key
         else:
             os.environ["OPENAI_API_KEY"] = api_key
             
